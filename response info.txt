@@ -1,0 +1,110 @@
+{
+     "username":"abul",
+     "email":"abul@gmail.com",
+     "password":"12345",
+     "confirmPassword":"12345"
+}
+
+{
+    "email": "juelkhan101@gmail.com",
+    "password": "12345"
+}
+
+signup POST message:--------------------------------------------
+if successfully signup
+{
+    "message": "user registration successfully"
+}
+
+if already logged in
+{
+    "message": "already logged in"
+}
+
+if username & email exist in database
+{
+    "message": {
+        "username": "Username already exist",
+        "email": "Email already exist"
+    }
+}
+
+if username <2 or username>15 
+{
+    "message": {
+        "username": "username must be between 2 to 15 character",
+        "email": "please provide a valid email"
+    }
+}
+
+if password does not match
+{
+    "message": {
+        "confirmPassword": "password doesn't matched"
+    }
+}
+login GET message:-------------------------------------------------
+if already logged in
+{
+    "message": "already logged in"
+}
+
+if not logged in
+{
+    "message": "login first"
+}
+
+login POST message:-------------------------------------------------
+if login successfully
+{
+    "message": "login successfully"
+}
+
+if already logged in
+{
+    "message": "already logged in"
+}
+
+if email & password empty
+{
+    "email": "Email can not be empty",
+    "password": "password can not be empty"
+}
+
+if email does not exist in database
+{
+    "email": "Email does not exist"
+}
+
+if email exist but password does not exist
+{
+    "message": "password does not matched"
+}
+
+dashboard GET message:----------------------------------------------
+if user is not logged in
+{
+    "message": "login first"
+}
+
+if user is logged in
+{
+    "message": "logged in"
+}
+
+logout GET message:-------------------------------------------------
+if sucessfully logout
+{
+    "message": "successfully logout"
+}
+
+isAuthenticated GET message-----------------------------------------
+if already logged in
+{
+    "message": "already logged in"
+}
+
+if  logged out state
+{
+    "message": "login first"
+}

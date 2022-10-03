@@ -1,0 +1,33 @@
+<%- include('../../partials/head.ejs')%>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-3">
+            <div class="card card-body form-card">
+                <h1 class="mb-3 text-center">Login your account</h1>
+                  <form action="/auth/login" method="POST">
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control <%= error.email?'is-invalid':''%>" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                        <div id="emailHelp" class="form-text">Input your valid email</div>
+                        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                          <%= error.email %>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control <%= error.email?'is-invalid':''%>" id="exampleInputPassword1" name="password">
+                        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+                          <%= error.password %>
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Submit</button>                     
+                    </form>
+                    <a href="/auth/signup" class="my-3 text-center">Don't have an account? create one</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../../partials/footer.ejs')%>
+</body>
+</html>

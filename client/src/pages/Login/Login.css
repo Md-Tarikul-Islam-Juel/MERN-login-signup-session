@@ -1,0 +1,11 @@
+.login-page{
+    background-color: #dcdde1;
+    min-height: 600px;
+}
+
+.loginForm-div{
+    margin-top: 50px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+}
